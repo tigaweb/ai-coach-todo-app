@@ -1,10 +1,14 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "../generated/prisma";
 import { Hono } from "hono";
 import { cors } from "hono/cors"
+import { serve } from '@hono/node-server';
 import { UserRepository } from "./repositories/UserRepository";
 import { AuthUsecase } from "./usecases/AuthUsecase";
 import { AuthController } from "./controllers/AuthController";
+import dotenv from 'dotenv';
 
+// 環境変数の読み込み
+dotenv.config();
 
 const app = new Hono();
 
@@ -37,7 +41,7 @@ app.post('/api/auth/login', (c) => authController.login(c));
 const port = parseInt(process.env.PORT || '3000');
 console.log(`Server is running on port ${port}`);
 
-export default {
-  port,
+serve({
   fetch: app.fetch,
-};
+  port,
+});
