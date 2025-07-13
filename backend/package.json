@@ -23,6 +23,7 @@
     "openai": "^5.9.0"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.0.13",
     "typescript": "^5.8.3"
   }
