@@ -10,18 +10,40 @@ import { TaskRepository } from "./repositories/TaskRepository";
 import { TaskUsecase } from "./usecases/TaskUsecase";
 import { TaskController } from "./controllers/TaskController";
 import { authMiddleware } from "./middleware/auth";
+import { AIController } from "./controllers/AIController";
+import { AICoachRepository } from "./repositories/AICoachRepository";
+import { AICommentRepository } from "./repositories/AICommentRepository";
+import { PromptRepository } from "./repositories/PromptRepository";
+import { AICoachUsecase } from "./usecases/AICoachUsecase";
 
 // 環境変数の読み込み
 dotenv.config();
 
-// 依存性注入
+// prismaクライアントの初期化
 const prisma = new PrismaClient();
+
+// repositoriesの初期化
 const userRepository = new UserRepository(prisma);
-const taskRepository = new TaskRepository(prisma)
+const taskRepository = new TaskRepository(prisma);
+const aiCommentRepository = new AICommentRepository(prisma);
+const aiCoachRepository = new AICoachRepository();
+const promptRepository = new PromptRepository(prisma);
+
+// usecasesの初期化
 const authUsecase = new AuthUsecase(userRepository);
 const taskUsecase = new TaskUsecase(taskRepository);
+const aiCoachUsecase = new AICoachUsecase(
+  aiCommentRepository,
+  aiCoachRepository,
+  promptRepository,
+  taskRepository
+);
+
+// controllersの初期化
 const authController = new AuthController(authUsecase);
 const taskController = new TaskController(taskUsecase);
+const aiController = new AIController(aiCoachUsecase);
+
 
 const app = new Hono();
 
@@ -51,6 +73,11 @@ app.get('/api/tasks/:id', (c) => taskController.getTaskById(c));
 app.post('/api/tasks', (c) => taskController.createTask(c));
 app.put('/api/tasks/:id', (c) => taskController.updateTask(c));
 app.delete('/api/tasks/:id', (c) => taskController.deleteTask(c));
+
+// AI
+app.post('/api/tasks/:id/consult', (c) => aiController.consultTask(c));
+app.get('/api/tasks/:id/comments', (c) => aiController.getTaskComments(c));
+app.get('/api/ai-comments/:id', (c) => aiController.getCommentById(c));
 
 // DB初期化
 async function initializeDatabase() {
@@ -96,6 +123,21 @@ async function initializeDatabase() {
     process.exit(1);
   }
 }
+
+// graceful shutdownの処理追加
+process.on('SIGINT', async () => { // Ctrl + Cでの終了時
+  console.log('\n Shutting down gracefully...');
+  await prisma.$disconnect();
+  console.log(' Database disconnected');
+  process.exit(0);
+});
+
+process.on('SIGTERM', async () => { // コンテナ終了時
+  console.log('\n Shutting down gracefully...');
+  await prisma.$disconnect();
+  console.log(' Database disconnected');
+  process.exit(0);
+});
 
 // サーバー起動&DB初期化
 async function startServer() {
