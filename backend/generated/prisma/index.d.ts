@@ -24,10 +24,10 @@ export type User = $Result.DefaultSelection<Prisma.$UserPayload>
  */
 export type Task = $Result.DefaultSelection<Prisma.$TaskPayload>
 /**
- * Model AIComment
+ * Model AiComment
  * 
  */
-export type AIComment = $Result.DefaultSelection<Prisma.$AICommentPayload>
+export type AiComment = $Result.DefaultSelection<Prisma.$AiCommentPayload>
 /**
  * Model Prompt
  * 
@@ -180,14 +180,14 @@ export class PrismaClient<
   get task(): Prisma.TaskDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.aIComment`: Exposes CRUD operations for the **AIComment** model.
+   * `prisma.aiComment`: Exposes CRUD operations for the **AiComment** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more AIComments
-    * const aIComments = await prisma.aIComment.findMany()
+    * // Fetch zero or more AiComments
+    * const aiComments = await prisma.aiComment.findMany()
     * ```
     */
-  get aIComment(): Prisma.AICommentDelegate<ExtArgs, ClientOptions>;
+  get aiComment(): Prisma.AiCommentDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.prompt`: Exposes CRUD operations for the **Prompt** model.
@@ -640,7 +640,7 @@ export namespace Prisma {
   export const ModelName: {
     User: 'User',
     Task: 'Task',
-    AIComment: 'AIComment',
+    AiComment: 'AiComment',
     Prompt: 'Prompt'
   };
 
@@ -660,7 +660,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "task" | "aIComment" | "prompt"
+      modelProps: "user" | "task" | "aiComment" | "prompt"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -812,77 +812,77 @@ export namespace Prisma {
           }
         }
       }
-      AIComment: {
-        payload: Prisma.$AICommentPayload<ExtArgs>
-        fields: Prisma.AICommentFieldRefs
+      AiComment: {
+        payload: Prisma.$AiCommentPayload<ExtArgs>
+        fields: Prisma.AiCommentFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.AICommentFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AICommentPayload> | null
+            args: Prisma.AiCommentFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AiCommentPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.AICommentFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AICommentPayload>
+            args: Prisma.AiCommentFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AiCommentPayload>
           }
           findFirst: {
-            args: Prisma.AICommentFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AICommentPayload> | null
+            args: Prisma.AiCommentFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AiCommentPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.AICommentFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AICommentPayload>
+            args: Prisma.AiCommentFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AiCommentPayload>
           }
           findMany: {
-            args: Prisma.AICommentFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AICommentPayload>[]
+            args: Prisma.AiCommentFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AiCommentPayload>[]
           }
           create: {
-            args: Prisma.AICommentCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AICommentPayload>
+            args: Prisma.AiCommentCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AiCommentPayload>
           }
           createMany: {
-            args: Prisma.AICommentCreateManyArgs<ExtArgs>
+            args: Prisma.AiCommentCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.AICommentCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AICommentPayload>[]
+            args: Prisma.AiCommentCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AiCommentPayload>[]
           }
           delete: {
-            args: Prisma.AICommentDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AICommentPayload>
+            args: Prisma.AiCommentDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AiCommentPayload>
           }
           update: {
-            args: Prisma.AICommentUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AICommentPayload>
+            args: Prisma.AiCommentUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AiCommentPayload>
           }
           deleteMany: {
-            args: Prisma.AICommentDeleteManyArgs<ExtArgs>
+            args: Prisma.AiCommentDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.AICommentUpdateManyArgs<ExtArgs>
+            args: Prisma.AiCommentUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.AICommentUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AICommentPayload>[]
+            args: Prisma.AiCommentUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AiCommentPayload>[]
           }
           upsert: {
-            args: Prisma.AICommentUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AICommentPayload>
+            args: Prisma.AiCommentUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AiCommentPayload>
           }
           aggregate: {
-            args: Prisma.AICommentAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateAIComment>
+            args: Prisma.AiCommentAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateAiComment>
           }
           groupBy: {
-            args: Prisma.AICommentGroupByArgs<ExtArgs>
-            result: $Utils.Optional<AICommentGroupByOutputType>[]
+            args: Prisma.AiCommentGroupByArgs<ExtArgs>
+            result: $Utils.Optional<AiCommentGroupByOutputType>[]
           }
           count: {
-            args: Prisma.AICommentCountArgs<ExtArgs>
-            result: $Utils.Optional<AICommentCountAggregateOutputType> | number
+            args: Prisma.AiCommentCountArgs<ExtArgs>
+            result: $Utils.Optional<AiCommentCountAggregateOutputType> | number
           }
         }
       }
@@ -1046,7 +1046,7 @@ export namespace Prisma {
   export type GlobalOmitConfig = {
     user?: UserOmit
     task?: TaskOmit
-    aIComment?: AICommentOmit
+    aiComment?: AiCommentOmit
     prompt?: PromptOmit
   }
 
@@ -1195,7 +1195,7 @@ export namespace Prisma {
    * TaskCountOutputType without action
    */
   export type TaskCountOutputTypeCountAiCommentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: AICommentWhereInput
+    where?: AiCommentWhereInput
   }
 
 
@@ -2620,7 +2620,7 @@ export namespace Prisma {
     name: "Task"
     objects: {
       user: Prisma.$UserPayload<ExtArgs>
-      aiComments: Prisma.$AICommentPayload<ExtArgs>[]
+      aiComments: Prisma.$AiCommentPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -3028,7 +3028,7 @@ export namespace Prisma {
   export interface Prisma__TaskClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-    aiComments<T extends Task$aiCommentsArgs<ExtArgs> = {}>(args?: Subset<T, Task$aiCommentsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AICommentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    aiComments<T extends Task$aiCommentsArgs<ExtArgs> = {}>(args?: Subset<T, Task$aiCommentsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AiCommentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3468,23 +3468,23 @@ export namespace Prisma {
    */
   export type Task$aiCommentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelect<ExtArgs> | null
+    select?: AiCommentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentInclude<ExtArgs> | null
-    where?: AICommentWhereInput
-    orderBy?: AICommentOrderByWithRelationInput | AICommentOrderByWithRelationInput[]
-    cursor?: AICommentWhereUniqueInput
+    include?: AiCommentInclude<ExtArgs> | null
+    where?: AiCommentWhereInput
+    orderBy?: AiCommentOrderByWithRelationInput | AiCommentOrderByWithRelationInput[]
+    cursor?: AiCommentWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: AICommentScalarFieldEnum | AICommentScalarFieldEnum[]
+    distinct?: AiCommentScalarFieldEnum | AiCommentScalarFieldEnum[]
   }
 
   /**
@@ -3507,37 +3507,28 @@ export namespace Prisma {
 
 
   /**
-   * Model AIComment
+   * Model AiComment
    */
 
-  export type AggregateAIComment = {
-    _count: AICommentCountAggregateOutputType | null
-    _avg: AICommentAvgAggregateOutputType | null
-    _sum: AICommentSumAggregateOutputType | null
-    _min: AICommentMinAggregateOutputType | null
-    _max: AICommentMaxAggregateOutputType | null
+  export type AggregateAiComment = {
+    _count: AiCommentCountAggregateOutputType | null
+    _avg: AiCommentAvgAggregateOutputType | null
+    _sum: AiCommentSumAggregateOutputType | null
+    _min: AiCommentMinAggregateOutputType | null
+    _max: AiCommentMaxAggregateOutputType | null
   }
 
-  export type AICommentAvgAggregateOutputType = {
+  export type AiCommentAvgAggregateOutputType = {
     id: number | null
     taskId: number | null
   }
 
-  export type AICommentSumAggregateOutputType = {
+  export type AiCommentSumAggregateOutputType = {
     id: number | null
     taskId: number | null
   }
 
-  export type AICommentMinAggregateOutputType = {
-    id: number | null
-    taskId: number | null
-    userInput: string | null
-    aiResponse: string | null
-    createdAt: Date | null
-    updatedAt: Date | null
-  }
-
-  export type AICommentMaxAggregateOutputType = {
+  export type AiCommentMinAggregateOutputType = {
     id: number | null
     taskId: number | null
     userInput: string | null
@@ -3546,7 +3537,16 @@ export namespace Prisma {
     updatedAt: Date | null
   }
 
-  export type AICommentCountAggregateOutputType = {
+  export type AiCommentMaxAggregateOutputType = {
+    id: number | null
+    taskId: number | null
+    userInput: string | null
+    aiResponse: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type AiCommentCountAggregateOutputType = {
     id: number
     taskId: number
     userInput: number
@@ -3557,26 +3557,17 @@ export namespace Prisma {
   }
 
 
-  export type AICommentAvgAggregateInputType = {
+  export type AiCommentAvgAggregateInputType = {
     id?: true
     taskId?: true
   }
 
-  export type AICommentSumAggregateInputType = {
+  export type AiCommentSumAggregateInputType = {
     id?: true
     taskId?: true
   }
 
-  export type AICommentMinAggregateInputType = {
-    id?: true
-    taskId?: true
-    userInput?: true
-    aiResponse?: true
-    createdAt?: true
-    updatedAt?: true
-  }
-
-  export type AICommentMaxAggregateInputType = {
+  export type AiCommentMinAggregateInputType = {
     id?: true
     taskId?: true
     userInput?: true
@@ -3585,7 +3576,16 @@ export namespace Prisma {
     updatedAt?: true
   }
 
-  export type AICommentCountAggregateInputType = {
+  export type AiCommentMaxAggregateInputType = {
+    id?: true
+    taskId?: true
+    userInput?: true
+    aiResponse?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type AiCommentCountAggregateInputType = {
     id?: true
     taskId?: true
     userInput?: true
@@ -3595,121 +3595,121 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type AICommentAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which AIComment to aggregate.
+     * Filter which AiComment to aggregate.
      */
-    where?: AICommentWhereInput
+    where?: AiCommentWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of AIComments to fetch.
+     * Determine the order of AiComments to fetch.
      */
-    orderBy?: AICommentOrderByWithRelationInput | AICommentOrderByWithRelationInput[]
+    orderBy?: AiCommentOrderByWithRelationInput | AiCommentOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: AICommentWhereUniqueInput
+    cursor?: AiCommentWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` AIComments from the position of the cursor.
+     * Take `±n` AiComments from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` AIComments.
+     * Skip the first `n` AiComments.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned AIComments
+     * Count returned AiComments
     **/
-    _count?: true | AICommentCountAggregateInputType
+    _count?: true | AiCommentCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: AICommentAvgAggregateInputType
+    _avg?: AiCommentAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: AICommentSumAggregateInputType
+    _sum?: AiCommentSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: AICommentMinAggregateInputType
+    _min?: AiCommentMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: AICommentMaxAggregateInputType
+    _max?: AiCommentMaxAggregateInputType
   }
 
-  export type GetAICommentAggregateType<T extends AICommentAggregateArgs> = {
-        [P in keyof T & keyof AggregateAIComment]: P extends '_count' | 'count'
+  export type GetAiCommentAggregateType<T extends AiCommentAggregateArgs> = {
+        [P in keyof T & keyof AggregateAiComment]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateAIComment[P]>
-      : GetScalarType<T[P], AggregateAIComment[P]>
+        : GetScalarType<T[P], AggregateAiComment[P]>
+      : GetScalarType<T[P], AggregateAiComment[P]>
   }
 
 
 
 
-  export type AICommentGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: AICommentWhereInput
-    orderBy?: AICommentOrderByWithAggregationInput | AICommentOrderByWithAggregationInput[]
-    by: AICommentScalarFieldEnum[] | AICommentScalarFieldEnum
-    having?: AICommentScalarWhereWithAggregatesInput
+  export type AiCommentGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AiCommentWhereInput
+    orderBy?: AiCommentOrderByWithAggregationInput | AiCommentOrderByWithAggregationInput[]
+    by: AiCommentScalarFieldEnum[] | AiCommentScalarFieldEnum
+    having?: AiCommentScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: AICommentCountAggregateInputType | true
-    _avg?: AICommentAvgAggregateInputType
-    _sum?: AICommentSumAggregateInputType
-    _min?: AICommentMinAggregateInputType
-    _max?: AICommentMaxAggregateInputType
+    _count?: AiCommentCountAggregateInputType | true
+    _avg?: AiCommentAvgAggregateInputType
+    _sum?: AiCommentSumAggregateInputType
+    _min?: AiCommentMinAggregateInputType
+    _max?: AiCommentMaxAggregateInputType
   }
 
-  export type AICommentGroupByOutputType = {
+  export type AiCommentGroupByOutputType = {
     id: number
     taskId: number
     userInput: string
     aiResponse: string
     createdAt: Date
     updatedAt: Date
-    _count: AICommentCountAggregateOutputType | null
-    _avg: AICommentAvgAggregateOutputType | null
-    _sum: AICommentSumAggregateOutputType | null
-    _min: AICommentMinAggregateOutputType | null
-    _max: AICommentMaxAggregateOutputType | null
+    _count: AiCommentCountAggregateOutputType | null
+    _avg: AiCommentAvgAggregateOutputType | null
+    _sum: AiCommentSumAggregateOutputType | null
+    _min: AiCommentMinAggregateOutputType | null
+    _max: AiCommentMaxAggregateOutputType | null
   }
 
-  type GetAICommentGroupByPayload<T extends AICommentGroupByArgs> = Prisma.PrismaPromise<
+  type GetAiCommentGroupByPayload<T extends AiCommentGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<AICommentGroupByOutputType, T['by']> &
+      PickEnumerable<AiCommentGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof AICommentGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof AiCommentGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], AICommentGroupByOutputType[P]>
-            : GetScalarType<T[P], AICommentGroupByOutputType[P]>
+              : GetScalarType<T[P], AiCommentGroupByOutputType[P]>
+            : GetScalarType<T[P], AiCommentGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type AICommentSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type AiCommentSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     taskId?: boolean
     userInput?: boolean
@@ -3717,9 +3717,9 @@ export namespace Prisma {
     createdAt?: boolean
     updatedAt?: boolean
     task?: boolean | TaskDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["aIComment"]>
+  }, ExtArgs["result"]["aiComment"]>
 
-  export type AICommentSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type AiCommentSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     taskId?: boolean
     userInput?: boolean
@@ -3727,9 +3727,9 @@ export namespace Prisma {
     createdAt?: boolean
     updatedAt?: boolean
     task?: boolean | TaskDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["aIComment"]>
+  }, ExtArgs["result"]["aiComment"]>
 
-  export type AICommentSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type AiCommentSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     taskId?: boolean
     userInput?: boolean
@@ -3737,9 +3737,9 @@ export namespace Prisma {
     createdAt?: boolean
     updatedAt?: boolean
     task?: boolean | TaskDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["aIComment"]>
+  }, ExtArgs["result"]["aiComment"]>
 
-  export type AICommentSelectScalar = {
+  export type AiCommentSelectScalar = {
     id?: boolean
     taskId?: boolean
     userInput?: boolean
@@ -3748,19 +3748,19 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type AICommentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "taskId" | "userInput" | "aiResponse" | "createdAt" | "updatedAt", ExtArgs["result"]["aIComment"]>
-  export type AICommentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "taskId" | "userInput" | "aiResponse" | "createdAt" | "updatedAt", ExtArgs["result"]["aiComment"]>
+  export type AiCommentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     task?: boolean | TaskDefaultArgs<ExtArgs>
   }
-  export type AICommentIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     task?: boolean | TaskDefaultArgs<ExtArgs>
   }
-  export type AICommentIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     task?: boolean | TaskDefaultArgs<ExtArgs>
   }
 
-  export type $AICommentPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "AIComment"
+  export type $AiCommentPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "AiComment"
     objects: {
       task: Prisma.$TaskPayload<ExtArgs>
     }
@@ -3771,136 +3771,136 @@ export namespace Prisma {
       aiResponse: string
       createdAt: Date
       updatedAt: Date
-    }, ExtArgs["result"]["aIComment"]>
+    }, ExtArgs["result"]["aiComment"]>
     composites: {}
   }
 
-  type AICommentGetPayload<S extends boolean | null | undefined | AICommentDefaultArgs> = $Result.GetResult<Prisma.$AICommentPayload, S>
+  type AiCommentGetPayload<S extends boolean | null | undefined | AiCommentDefaultArgs> = $Result.GetResult<Prisma.$AiCommentPayload, S>
 
-  type AICommentCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<AICommentFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: AICommentCountAggregateInputType | true
+  type AiCommentCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<AiCommentFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: AiCommentCountAggregateInputType | true
     }
 
-  export interface AICommentDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['AIComment'], meta: { name: 'AIComment' } }
+  export interface AiCommentDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['AiComment'], meta: { name: 'AiComment' } }
     /**
-     * Find zero or one AIComment that matches the filter.
-     * @param {AICommentFindUniqueArgs} args - Arguments to find a AIComment
+     * Find zero or one AiComment that matches the filter.
+     * @param {AiCommentFindUniqueArgs} args - Arguments to find a AiComment
      * @example
-     * // Get one AIComment
-     * const aIComment = await prisma.aIComment.findUnique({
+     * // Get one AiComment
+     * const aiComment = await prisma.aiComment.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends AICommentFindUniqueArgs>(args: SelectSubset<T, AICommentFindUniqueArgs<ExtArgs>>): Prisma__AICommentClient<$Result.GetResult<Prisma.$AICommentPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends AiCommentFindUniqueArgs>(args: SelectSubset<T, AiCommentFindUniqueArgs<ExtArgs>>): Prisma__AiCommentClient<$Result.GetResult<Prisma.$AiCommentPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one AIComment that matches the filter or throw an error with `error.code='P2025'`
+     * Find one AiComment that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {AICommentFindUniqueOrThrowArgs} args - Arguments to find a AIComment
+     * @param {AiCommentFindUniqueOrThrowArgs} args - Arguments to find a AiComment
      * @example
-     * // Get one AIComment
-     * const aIComment = await prisma.aIComment.findUniqueOrThrow({
+     * // Get one AiComment
+     * const aiComment = await prisma.aiComment.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends AICommentFindUniqueOrThrowArgs>(args: SelectSubset<T, AICommentFindUniqueOrThrowArgs<ExtArgs>>): Prisma__AICommentClient<$Result.GetResult<Prisma.$AICommentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends AiCommentFindUniqueOrThrowArgs>(args: SelectSubset<T, AiCommentFindUniqueOrThrowArgs<ExtArgs>>): Prisma__AiCommentClient<$Result.GetResult<Prisma.$AiCommentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first AIComment that matches the filter.
+     * Find the first AiComment that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AICommentFindFirstArgs} args - Arguments to find a AIComment
+     * @param {AiCommentFindFirstArgs} args - Arguments to find a AiComment
      * @example
-     * // Get one AIComment
-     * const aIComment = await prisma.aIComment.findFirst({
+     * // Get one AiComment
+     * const aiComment = await prisma.aiComment.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends AICommentFindFirstArgs>(args?: SelectSubset<T, AICommentFindFirstArgs<ExtArgs>>): Prisma__AICommentClient<$Result.GetResult<Prisma.$AICommentPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends AiCommentFindFirstArgs>(args?: SelectSubset<T, AiCommentFindFirstArgs<ExtArgs>>): Prisma__AiCommentClient<$Result.GetResult<Prisma.$AiCommentPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first AIComment that matches the filter or
+     * Find the first AiComment that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AICommentFindFirstOrThrowArgs} args - Arguments to find a AIComment
+     * @param {AiCommentFindFirstOrThrowArgs} args - Arguments to find a AiComment
      * @example
-     * // Get one AIComment
-     * const aIComment = await prisma.aIComment.findFirstOrThrow({
+     * // Get one AiComment
+     * const aiComment = await prisma.aiComment.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends AICommentFindFirstOrThrowArgs>(args?: SelectSubset<T, AICommentFindFirstOrThrowArgs<ExtArgs>>): Prisma__AICommentClient<$Result.GetResult<Prisma.$AICommentPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends AiCommentFindFirstOrThrowArgs>(args?: SelectSubset<T, AiCommentFindFirstOrThrowArgs<ExtArgs>>): Prisma__AiCommentClient<$Result.GetResult<Prisma.$AiCommentPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more AIComments that matches the filter.
+     * Find zero or more AiComments that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AICommentFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {AiCommentFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all AIComments
-     * const aIComments = await prisma.aIComment.findMany()
+     * // Get all AiComments
+     * const aiComments = await prisma.aiComment.findMany()
      * 
-     * // Get first 10 AIComments
-     * const aIComments = await prisma.aIComment.findMany({ take: 10 })
+     * // Get first 10 AiComments
+     * const aiComments = await prisma.aiComment.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const aICommentWithIdOnly = await prisma.aIComment.findMany({ select: { id: true } })
+     * const aiCommentWithIdOnly = await prisma.aiComment.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends AICommentFindManyArgs>(args?: SelectSubset<T, AICommentFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AICommentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends AiCommentFindManyArgs>(args?: SelectSubset<T, AiCommentFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AiCommentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a AIComment.
-     * @param {AICommentCreateArgs} args - Arguments to create a AIComment.
+     * Create a AiComment.
+     * @param {AiCommentCreateArgs} args - Arguments to create a AiComment.
      * @example
-     * // Create one AIComment
-     * const AIComment = await prisma.aIComment.create({
+     * // Create one AiComment
+     * const AiComment = await prisma.aiComment.create({
      *   data: {
-     *     // ... data to create a AIComment
+     *     // ... data to create a AiComment
      *   }
      * })
      * 
      */
-    create<T extends AICommentCreateArgs>(args: SelectSubset<T, AICommentCreateArgs<ExtArgs>>): Prisma__AICommentClient<$Result.GetResult<Prisma.$AICommentPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends AiCommentCreateArgs>(args: SelectSubset<T, AiCommentCreateArgs<ExtArgs>>): Prisma__AiCommentClient<$Result.GetResult<Prisma.$AiCommentPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many AIComments.
-     * @param {AICommentCreateManyArgs} args - Arguments to create many AIComments.
+     * Create many AiComments.
+     * @param {AiCommentCreateManyArgs} args - Arguments to create many AiComments.
      * @example
-     * // Create many AIComments
-     * const aIComment = await prisma.aIComment.createMany({
+     * // Create many AiComments
+     * const aiComment = await prisma.aiComment.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends AICommentCreateManyArgs>(args?: SelectSubset<T, AICommentCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends AiCommentCreateManyArgs>(args?: SelectSubset<T, AiCommentCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many AIComments and returns the data saved in the database.
-     * @param {AICommentCreateManyAndReturnArgs} args - Arguments to create many AIComments.
+     * Create many AiComments and returns the data saved in the database.
+     * @param {AiCommentCreateManyAndReturnArgs} args - Arguments to create many AiComments.
      * @example
-     * // Create many AIComments
-     * const aIComment = await prisma.aIComment.createManyAndReturn({
+     * // Create many AiComments
+     * const aiComment = await prisma.aiComment.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many AIComments and only return the `id`
-     * const aICommentWithIdOnly = await prisma.aIComment.createManyAndReturn({
+     * // Create many AiComments and only return the `id`
+     * const aiCommentWithIdOnly = await prisma.aiComment.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -3910,28 +3910,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends AICommentCreateManyAndReturnArgs>(args?: SelectSubset<T, AICommentCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AICommentPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends AiCommentCreateManyAndReturnArgs>(args?: SelectSubset<T, AiCommentCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AiCommentPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a AIComment.
-     * @param {AICommentDeleteArgs} args - Arguments to delete one AIComment.
+     * Delete a AiComment.
+     * @param {AiCommentDeleteArgs} args - Arguments to delete one AiComment.
      * @example
-     * // Delete one AIComment
-     * const AIComment = await prisma.aIComment.delete({
+     * // Delete one AiComment
+     * const AiComment = await prisma.aiComment.delete({
      *   where: {
-     *     // ... filter to delete one AIComment
+     *     // ... filter to delete one AiComment
      *   }
      * })
      * 
      */
-    delete<T extends AICommentDeleteArgs>(args: SelectSubset<T, AICommentDeleteArgs<ExtArgs>>): Prisma__AICommentClient<$Result.GetResult<Prisma.$AICommentPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends AiCommentDeleteArgs>(args: SelectSubset<T, AiCommentDeleteArgs<ExtArgs>>): Prisma__AiCommentClient<$Result.GetResult<Prisma.$AiCommentPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one AIComment.
-     * @param {AICommentUpdateArgs} args - Arguments to update one AIComment.
+     * Update one AiComment.
+     * @param {AiCommentUpdateArgs} args - Arguments to update one AiComment.
      * @example
-     * // Update one AIComment
-     * const aIComment = await prisma.aIComment.update({
+     * // Update one AiComment
+     * const aiComment = await prisma.aiComment.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3941,30 +3941,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends AICommentUpdateArgs>(args: SelectSubset<T, AICommentUpdateArgs<ExtArgs>>): Prisma__AICommentClient<$Result.GetResult<Prisma.$AICommentPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends AiCommentUpdateArgs>(args: SelectSubset<T, AiCommentUpdateArgs<ExtArgs>>): Prisma__AiCommentClient<$Result.GetResult<Prisma.$AiCommentPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more AIComments.
-     * @param {AICommentDeleteManyArgs} args - Arguments to filter AIComments to delete.
+     * Delete zero or more AiComments.
+     * @param {AiCommentDeleteManyArgs} args - Arguments to filter AiComments to delete.
      * @example
-     * // Delete a few AIComments
-     * const { count } = await prisma.aIComment.deleteMany({
+     * // Delete a few AiComments
+     * const { count } = await prisma.aiComment.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends AICommentDeleteManyArgs>(args?: SelectSubset<T, AICommentDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends AiCommentDeleteManyArgs>(args?: SelectSubset<T, AiCommentDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more AIComments.
+     * Update zero or more AiComments.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AICommentUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {AiCommentUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many AIComments
-     * const aIComment = await prisma.aIComment.updateMany({
+     * // Update many AiComments
+     * const aiComment = await prisma.aiComment.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3974,14 +3974,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends AICommentUpdateManyArgs>(args: SelectSubset<T, AICommentUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends AiCommentUpdateManyArgs>(args: SelectSubset<T, AiCommentUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more AIComments and returns the data updated in the database.
-     * @param {AICommentUpdateManyAndReturnArgs} args - Arguments to update many AIComments.
+     * Update zero or more AiComments and returns the data updated in the database.
+     * @param {AiCommentUpdateManyAndReturnArgs} args - Arguments to update many AiComments.
      * @example
-     * // Update many AIComments
-     * const aIComment = await prisma.aIComment.updateManyAndReturn({
+     * // Update many AiComments
+     * const aiComment = await prisma.aiComment.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3990,8 +3990,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more AIComments and only return the `id`
-     * const aICommentWithIdOnly = await prisma.aIComment.updateManyAndReturn({
+     * // Update zero or more AiComments and only return the `id`
+     * const aiCommentWithIdOnly = await prisma.aiComment.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -4004,56 +4004,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends AICommentUpdateManyAndReturnArgs>(args: SelectSubset<T, AICommentUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AICommentPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends AiCommentUpdateManyAndReturnArgs>(args: SelectSubset<T, AiCommentUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AiCommentPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one AIComment.
-     * @param {AICommentUpsertArgs} args - Arguments to update or create a AIComment.
+     * Create or update one AiComment.
+     * @param {AiCommentUpsertArgs} args - Arguments to update or create a AiComment.
      * @example
-     * // Update or create a AIComment
-     * const aIComment = await prisma.aIComment.upsert({
+     * // Update or create a AiComment
+     * const aiComment = await prisma.aiComment.upsert({
      *   create: {
-     *     // ... data to create a AIComment
+     *     // ... data to create a AiComment
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the AIComment we want to update
+     *     // ... the filter for the AiComment we want to update
      *   }
      * })
      */
-    upsert<T extends AICommentUpsertArgs>(args: SelectSubset<T, AICommentUpsertArgs<ExtArgs>>): Prisma__AICommentClient<$Result.GetResult<Prisma.$AICommentPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends AiCommentUpsertArgs>(args: SelectSubset<T, AiCommentUpsertArgs<ExtArgs>>): Prisma__AiCommentClient<$Result.GetResult<Prisma.$AiCommentPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of AIComments.
+     * Count the number of AiComments.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AICommentCountArgs} args - Arguments to filter AIComments to count.
+     * @param {AiCommentCountArgs} args - Arguments to filter AiComments to count.
      * @example
-     * // Count the number of AIComments
-     * const count = await prisma.aIComment.count({
+     * // Count the number of AiComments
+     * const count = await prisma.aiComment.count({
      *   where: {
-     *     // ... the filter for the AIComments we want to count
+     *     // ... the filter for the AiComments we want to count
      *   }
      * })
     **/
-    count<T extends AICommentCountArgs>(
-      args?: Subset<T, AICommentCountArgs>,
+    count<T extends AiCommentCountArgs>(
+      args?: Subset<T, AiCommentCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], AICommentCountAggregateOutputType>
+          : GetScalarType<T['select'], AiCommentCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a AIComment.
+     * Allows you to perform aggregations operations on a AiComment.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AICommentAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {AiCommentAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -4073,13 +4073,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends AICommentAggregateArgs>(args: Subset<T, AICommentAggregateArgs>): Prisma.PrismaPromise<GetAICommentAggregateType<T>>
+    aggregate<T extends AiCommentAggregateArgs>(args: Subset<T, AiCommentAggregateArgs>): Prisma.PrismaPromise<GetAiCommentAggregateType<T>>
 
     /**
-     * Group by AIComment.
+     * Group by AiComment.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AICommentGroupByArgs} args - Group by arguments.
+     * @param {AiCommentGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -4094,14 +4094,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends AICommentGroupByArgs,
+      T extends AiCommentGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: AICommentGroupByArgs['orderBy'] }
-        : { orderBy?: AICommentGroupByArgs['orderBy'] },
+        ? { orderBy: AiCommentGroupByArgs['orderBy'] }
+        : { orderBy?: AiCommentGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -4150,20 +4150,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, AICommentGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAICommentGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, AiCommentGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAiCommentGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the AIComment model
+   * Fields of the AiComment model
    */
-  readonly fields: AICommentFieldRefs;
+  readonly fields: AiCommentFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for AIComment.
+   * The delegate class that acts as a "Promise-like" for AiComment.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__AICommentClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__AiCommentClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     task<T extends TaskDefaultArgs<ExtArgs> = {}>(args?: Subset<T, TaskDefaultArgs<ExtArgs>>): Prisma__TaskClient<$Result.GetResult<Prisma.$TaskPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
@@ -4192,426 +4192,426 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the AIComment model
+   * Fields of the AiComment model
    */
-  interface AICommentFieldRefs {
-    readonly id: FieldRef<"AIComment", 'Int'>
-    readonly taskId: FieldRef<"AIComment", 'Int'>
-    readonly userInput: FieldRef<"AIComment", 'String'>
-    readonly aiResponse: FieldRef<"AIComment", 'String'>
-    readonly createdAt: FieldRef<"AIComment", 'DateTime'>
-    readonly updatedAt: FieldRef<"AIComment", 'DateTime'>
+  interface AiCommentFieldRefs {
+    readonly id: FieldRef<"AiComment", 'Int'>
+    readonly taskId: FieldRef<"AiComment", 'Int'>
+    readonly userInput: FieldRef<"AiComment", 'String'>
+    readonly aiResponse: FieldRef<"AiComment", 'String'>
+    readonly createdAt: FieldRef<"AiComment", 'DateTime'>
+    readonly updatedAt: FieldRef<"AiComment", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * AIComment findUnique
+   * AiComment findUnique
    */
-  export type AICommentFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelect<ExtArgs> | null
+    select?: AiCommentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentInclude<ExtArgs> | null
+    include?: AiCommentInclude<ExtArgs> | null
     /**
-     * Filter, which AIComment to fetch.
+     * Filter, which AiComment to fetch.
      */
-    where: AICommentWhereUniqueInput
+    where: AiCommentWhereUniqueInput
   }
 
   /**
-   * AIComment findUniqueOrThrow
+   * AiComment findUniqueOrThrow
    */
-  export type AICommentFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelect<ExtArgs> | null
+    select?: AiCommentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentInclude<ExtArgs> | null
+    include?: AiCommentInclude<ExtArgs> | null
     /**
-     * Filter, which AIComment to fetch.
+     * Filter, which AiComment to fetch.
      */
-    where: AICommentWhereUniqueInput
+    where: AiCommentWhereUniqueInput
   }
 
   /**
-   * AIComment findFirst
+   * AiComment findFirst
    */
-  export type AICommentFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelect<ExtArgs> | null
+    select?: AiCommentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentInclude<ExtArgs> | null
+    include?: AiCommentInclude<ExtArgs> | null
     /**
-     * Filter, which AIComment to fetch.
+     * Filter, which AiComment to fetch.
      */
-    where?: AICommentWhereInput
+    where?: AiCommentWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of AIComments to fetch.
+     * Determine the order of AiComments to fetch.
      */
-    orderBy?: AICommentOrderByWithRelationInput | AICommentOrderByWithRelationInput[]
+    orderBy?: AiCommentOrderByWithRelationInput | AiCommentOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for AIComments.
+     * Sets the position for searching for AiComments.
      */
-    cursor?: AICommentWhereUniqueInput
+    cursor?: AiCommentWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` AIComments from the position of the cursor.
+     * Take `±n` AiComments from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` AIComments.
+     * Skip the first `n` AiComments.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of AIComments.
+     * Filter by unique combinations of AiComments.
      */
-    distinct?: AICommentScalarFieldEnum | AICommentScalarFieldEnum[]
+    distinct?: AiCommentScalarFieldEnum | AiCommentScalarFieldEnum[]
   }
 
   /**
-   * AIComment findFirstOrThrow
+   * AiComment findFirstOrThrow
    */
-  export type AICommentFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelect<ExtArgs> | null
+    select?: AiCommentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentInclude<ExtArgs> | null
+    include?: AiCommentInclude<ExtArgs> | null
     /**
-     * Filter, which AIComment to fetch.
+     * Filter, which AiComment to fetch.
      */
-    where?: AICommentWhereInput
+    where?: AiCommentWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of AIComments to fetch.
+     * Determine the order of AiComments to fetch.
      */
-    orderBy?: AICommentOrderByWithRelationInput | AICommentOrderByWithRelationInput[]
+    orderBy?: AiCommentOrderByWithRelationInput | AiCommentOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for AIComments.
+     * Sets the position for searching for AiComments.
      */
-    cursor?: AICommentWhereUniqueInput
+    cursor?: AiCommentWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` AIComments from the position of the cursor.
+     * Take `±n` AiComments from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` AIComments.
+     * Skip the first `n` AiComments.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of AIComments.
+     * Filter by unique combinations of AiComments.
      */
-    distinct?: AICommentScalarFieldEnum | AICommentScalarFieldEnum[]
+    distinct?: AiCommentScalarFieldEnum | AiCommentScalarFieldEnum[]
   }
 
   /**
-   * AIComment findMany
+   * AiComment findMany
    */
-  export type AICommentFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelect<ExtArgs> | null
+    select?: AiCommentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentInclude<ExtArgs> | null
+    include?: AiCommentInclude<ExtArgs> | null
     /**
-     * Filter, which AIComments to fetch.
+     * Filter, which AiComments to fetch.
      */
-    where?: AICommentWhereInput
+    where?: AiCommentWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of AIComments to fetch.
+     * Determine the order of AiComments to fetch.
      */
-    orderBy?: AICommentOrderByWithRelationInput | AICommentOrderByWithRelationInput[]
+    orderBy?: AiCommentOrderByWithRelationInput | AiCommentOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing AIComments.
+     * Sets the position for listing AiComments.
      */
-    cursor?: AICommentWhereUniqueInput
+    cursor?: AiCommentWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` AIComments from the position of the cursor.
+     * Take `±n` AiComments from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` AIComments.
+     * Skip the first `n` AiComments.
      */
     skip?: number
-    distinct?: AICommentScalarFieldEnum | AICommentScalarFieldEnum[]
+    distinct?: AiCommentScalarFieldEnum | AiCommentScalarFieldEnum[]
   }
 
   /**
-   * AIComment create
+   * AiComment create
    */
-  export type AICommentCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelect<ExtArgs> | null
+    select?: AiCommentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentInclude<ExtArgs> | null
+    include?: AiCommentInclude<ExtArgs> | null
     /**
-     * The data needed to create a AIComment.
+     * The data needed to create a AiComment.
      */
-    data: XOR<AICommentCreateInput, AICommentUncheckedCreateInput>
+    data: XOR<AiCommentCreateInput, AiCommentUncheckedCreateInput>
   }
 
   /**
-   * AIComment createMany
+   * AiComment createMany
    */
-  export type AICommentCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many AIComments.
+     * The data used to create many AiComments.
      */
-    data: AICommentCreateManyInput | AICommentCreateManyInput[]
+    data: AiCommentCreateManyInput | AiCommentCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * AIComment createManyAndReturn
+   * AiComment createManyAndReturn
    */
-  export type AICommentCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelectCreateManyAndReturn<ExtArgs> | null
+    select?: AiCommentSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
-     * The data used to create many AIComments.
+     * The data used to create many AiComments.
      */
-    data: AICommentCreateManyInput | AICommentCreateManyInput[]
+    data: AiCommentCreateManyInput | AiCommentCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: AiCommentIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * AIComment update
+   * AiComment update
    */
-  export type AICommentUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelect<ExtArgs> | null
+    select?: AiCommentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentInclude<ExtArgs> | null
+    include?: AiCommentInclude<ExtArgs> | null
     /**
-     * The data needed to update a AIComment.
+     * The data needed to update a AiComment.
      */
-    data: XOR<AICommentUpdateInput, AICommentUncheckedUpdateInput>
+    data: XOR<AiCommentUpdateInput, AiCommentUncheckedUpdateInput>
     /**
-     * Choose, which AIComment to update.
+     * Choose, which AiComment to update.
      */
-    where: AICommentWhereUniqueInput
+    where: AiCommentWhereUniqueInput
   }
 
   /**
-   * AIComment updateMany
+   * AiComment updateMany
    */
-  export type AICommentUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update AIComments.
+     * The data used to update AiComments.
      */
-    data: XOR<AICommentUpdateManyMutationInput, AICommentUncheckedUpdateManyInput>
+    data: XOR<AiCommentUpdateManyMutationInput, AiCommentUncheckedUpdateManyInput>
     /**
-     * Filter which AIComments to update
+     * Filter which AiComments to update
      */
-    where?: AICommentWhereInput
+    where?: AiCommentWhereInput
     /**
-     * Limit how many AIComments to update.
+     * Limit how many AiComments to update.
      */
     limit?: number
   }
 
   /**
-   * AIComment updateManyAndReturn
+   * AiComment updateManyAndReturn
    */
-  export type AICommentUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: AiCommentSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
-     * The data used to update AIComments.
+     * The data used to update AiComments.
      */
-    data: XOR<AICommentUpdateManyMutationInput, AICommentUncheckedUpdateManyInput>
+    data: XOR<AiCommentUpdateManyMutationInput, AiCommentUncheckedUpdateManyInput>
     /**
-     * Filter which AIComments to update
+     * Filter which AiComments to update
      */
-    where?: AICommentWhereInput
+    where?: AiCommentWhereInput
     /**
-     * Limit how many AIComments to update.
+     * Limit how many AiComments to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: AiCommentIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * AIComment upsert
+   * AiComment upsert
    */
-  export type AICommentUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelect<ExtArgs> | null
+    select?: AiCommentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentInclude<ExtArgs> | null
+    include?: AiCommentInclude<ExtArgs> | null
     /**
-     * The filter to search for the AIComment to update in case it exists.
+     * The filter to search for the AiComment to update in case it exists.
      */
-    where: AICommentWhereUniqueInput
+    where: AiCommentWhereUniqueInput
     /**
-     * In case the AIComment found by the `where` argument doesn't exist, create a new AIComment with this data.
+     * In case the AiComment found by the `where` argument doesn't exist, create a new AiComment with this data.
      */
-    create: XOR<AICommentCreateInput, AICommentUncheckedCreateInput>
+    create: XOR<AiCommentCreateInput, AiCommentUncheckedCreateInput>
     /**
-     * In case the AIComment was found with the provided `where` argument, update it with this data.
+     * In case the AiComment was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<AICommentUpdateInput, AICommentUncheckedUpdateInput>
+    update: XOR<AiCommentUpdateInput, AiCommentUncheckedUpdateInput>
   }
 
   /**
-   * AIComment delete
+   * AiComment delete
    */
-  export type AICommentDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelect<ExtArgs> | null
+    select?: AiCommentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentInclude<ExtArgs> | null
+    include?: AiCommentInclude<ExtArgs> | null
     /**
-     * Filter which AIComment to delete.
+     * Filter which AiComment to delete.
      */
-    where: AICommentWhereUniqueInput
+    where: AiCommentWhereUniqueInput
   }
 
   /**
-   * AIComment deleteMany
+   * AiComment deleteMany
    */
-  export type AICommentDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which AIComments to delete
+     * Filter which AiComments to delete
      */
-    where?: AICommentWhereInput
+    where?: AiCommentWhereInput
     /**
-     * Limit how many AIComments to delete.
+     * Limit how many AiComments to delete.
      */
     limit?: number
   }
 
   /**
-   * AIComment without action
+   * AiComment without action
    */
-  export type AICommentDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AiCommentDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AIComment
+     * Select specific fields to fetch from the AiComment
      */
-    select?: AICommentSelect<ExtArgs> | null
+    select?: AiCommentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AIComment
+     * Omit specific fields from the AiComment
      */
-    omit?: AICommentOmit<ExtArgs> | null
+    omit?: AiCommentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AICommentInclude<ExtArgs> | null
+    include?: AiCommentInclude<ExtArgs> | null
   }
 
 
@@ -5698,7 +5698,7 @@ export namespace Prisma {
   export type TaskScalarFieldEnum = (typeof TaskScalarFieldEnum)[keyof typeof TaskScalarFieldEnum]
 
 
-  export const AICommentScalarFieldEnum: {
+  export const AiCommentScalarFieldEnum: {
     id: 'id',
     taskId: 'taskId',
     userInput: 'userInput',
@@ -5707,7 +5707,7 @@ export namespace Prisma {
     updatedAt: 'updatedAt'
   };
 
-  export type AICommentScalarFieldEnum = (typeof AICommentScalarFieldEnum)[keyof typeof AICommentScalarFieldEnum]
+  export type AiCommentScalarFieldEnum = (typeof AiCommentScalarFieldEnum)[keyof typeof AiCommentScalarFieldEnum]
 
 
   export const PromptScalarFieldEnum: {
@@ -5889,7 +5889,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"Task"> | Date | string
     updatedAt?: DateTimeFilter<"Task"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-    aiComments?: AICommentListRelationFilter
+    aiComments?: AiCommentListRelationFilter
   }
 
   export type TaskOrderByWithRelationInput = {
@@ -5904,7 +5904,7 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     user?: UserOrderByWithRelationInput
-    aiComments?: AICommentOrderByRelationAggregateInput
+    aiComments?: AiCommentOrderByRelationAggregateInput
   }
 
   export type TaskWhereUniqueInput = Prisma.AtLeast<{
@@ -5922,7 +5922,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"Task"> | Date | string
     updatedAt?: DateTimeFilter<"Task"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-    aiComments?: AICommentListRelationFilter
+    aiComments?: AiCommentListRelationFilter
   }, "id">
 
   export type TaskOrderByWithAggregationInput = {
@@ -5959,20 +5959,20 @@ export namespace Prisma {
     updatedAt?: DateTimeWithAggregatesFilter<"Task"> | Date | string
   }
 
-  export type AICommentWhereInput = {
-    AND?: AICommentWhereInput | AICommentWhereInput[]
-    OR?: AICommentWhereInput[]
-    NOT?: AICommentWhereInput | AICommentWhereInput[]
-    id?: IntFilter<"AIComment"> | number
-    taskId?: IntFilter<"AIComment"> | number
-    userInput?: StringFilter<"AIComment"> | string
-    aiResponse?: StringFilter<"AIComment"> | string
-    createdAt?: DateTimeFilter<"AIComment"> | Date | string
-    updatedAt?: DateTimeFilter<"AIComment"> | Date | string
+  export type AiCommentWhereInput = {
+    AND?: AiCommentWhereInput | AiCommentWhereInput[]
+    OR?: AiCommentWhereInput[]
+    NOT?: AiCommentWhereInput | AiCommentWhereInput[]
+    id?: IntFilter<"AiComment"> | number
+    taskId?: IntFilter<"AiComment"> | number
+    userInput?: StringFilter<"AiComment"> | string
+    aiResponse?: StringFilter<"AiComment"> | string
+    createdAt?: DateTimeFilter<"AiComment"> | Date | string
+    updatedAt?: DateTimeFilter<"AiComment"> | Date | string
     task?: XOR<TaskScalarRelationFilter, TaskWhereInput>
   }
 
-  export type AICommentOrderByWithRelationInput = {
+  export type AiCommentOrderByWithRelationInput = {
     id?: SortOrder
     taskId?: SortOrder
     userInput?: SortOrder
@@ -5982,43 +5982,43 @@ export namespace Prisma {
     task?: TaskOrderByWithRelationInput
   }
 
-  export type AICommentWhereUniqueInput = Prisma.AtLeast<{
+  export type AiCommentWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: AICommentWhereInput | AICommentWhereInput[]
-    OR?: AICommentWhereInput[]
-    NOT?: AICommentWhereInput | AICommentWhereInput[]
-    taskId?: IntFilter<"AIComment"> | number
-    userInput?: StringFilter<"AIComment"> | string
-    aiResponse?: StringFilter<"AIComment"> | string
-    createdAt?: DateTimeFilter<"AIComment"> | Date | string
-    updatedAt?: DateTimeFilter<"AIComment"> | Date | string
+    AND?: AiCommentWhereInput | AiCommentWhereInput[]
+    OR?: AiCommentWhereInput[]
+    NOT?: AiCommentWhereInput | AiCommentWhereInput[]
+    taskId?: IntFilter<"AiComment"> | number
+    userInput?: StringFilter<"AiComment"> | string
+    aiResponse?: StringFilter<"AiComment"> | string
+    createdAt?: DateTimeFilter<"AiComment"> | Date | string
+    updatedAt?: DateTimeFilter<"AiComment"> | Date | string
     task?: XOR<TaskScalarRelationFilter, TaskWhereInput>
   }, "id">
 
-  export type AICommentOrderByWithAggregationInput = {
+  export type AiCommentOrderByWithAggregationInput = {
     id?: SortOrder
     taskId?: SortOrder
     userInput?: SortOrder
     aiResponse?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    _count?: AICommentCountOrderByAggregateInput
-    _avg?: AICommentAvgOrderByAggregateInput
-    _max?: AICommentMaxOrderByAggregateInput
-    _min?: AICommentMinOrderByAggregateInput
-    _sum?: AICommentSumOrderByAggregateInput
+    _count?: AiCommentCountOrderByAggregateInput
+    _avg?: AiCommentAvgOrderByAggregateInput
+    _max?: AiCommentMaxOrderByAggregateInput
+    _min?: AiCommentMinOrderByAggregateInput
+    _sum?: AiCommentSumOrderByAggregateInput
   }
 
-  export type AICommentScalarWhereWithAggregatesInput = {
-    AND?: AICommentScalarWhereWithAggregatesInput | AICommentScalarWhereWithAggregatesInput[]
-    OR?: AICommentScalarWhereWithAggregatesInput[]
-    NOT?: AICommentScalarWhereWithAggregatesInput | AICommentScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"AIComment"> | number
-    taskId?: IntWithAggregatesFilter<"AIComment"> | number
-    userInput?: StringWithAggregatesFilter<"AIComment"> | string
-    aiResponse?: StringWithAggregatesFilter<"AIComment"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"AIComment"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"AIComment"> | Date | string
+  export type AiCommentScalarWhereWithAggregatesInput = {
+    AND?: AiCommentScalarWhereWithAggregatesInput | AiCommentScalarWhereWithAggregatesInput[]
+    OR?: AiCommentScalarWhereWithAggregatesInput[]
+    NOT?: AiCommentScalarWhereWithAggregatesInput | AiCommentScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"AiComment"> | number
+    taskId?: IntWithAggregatesFilter<"AiComment"> | number
+    userInput?: StringWithAggregatesFilter<"AiComment"> | string
+    aiResponse?: StringWithAggregatesFilter<"AiComment"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"AiComment"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"AiComment"> | Date | string
   }
 
   export type PromptWhereInput = {
@@ -6147,7 +6147,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     user: UserCreateNestedOneWithoutTasksInput
-    aiComments?: AICommentCreateNestedManyWithoutTaskInput
+    aiComments?: AiCommentCreateNestedManyWithoutTaskInput
   }
 
   export type TaskUncheckedCreateInput = {
@@ -6161,7 +6161,7 @@ export namespace Prisma {
     completionCriteria?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    aiComments?: AICommentUncheckedCreateNestedManyWithoutTaskInput
+    aiComments?: AiCommentUncheckedCreateNestedManyWithoutTaskInput
   }
 
   export type TaskUpdateInput = {
@@ -6174,7 +6174,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutTasksNestedInput
-    aiComments?: AICommentUpdateManyWithoutTaskNestedInput
+    aiComments?: AiCommentUpdateManyWithoutTaskNestedInput
   }
 
   export type TaskUncheckedUpdateInput = {
@@ -6188,7 +6188,7 @@ export namespace Prisma {
     completionCriteria?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    aiComments?: AICommentUncheckedUpdateManyWithoutTaskNestedInput
+    aiComments?: AiCommentUncheckedUpdateManyWithoutTaskNestedInput
   }
 
   export type TaskCreateManyInput = {
@@ -6228,7 +6228,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type AICommentCreateInput = {
+  export type AiCommentCreateInput = {
     userInput: string
     aiResponse: string
     createdAt?: Date | string
@@ -6236,7 +6236,7 @@ export namespace Prisma {
     task: TaskCreateNestedOneWithoutAiCommentsInput
   }
 
-  export type AICommentUncheckedCreateInput = {
+  export type AiCommentUncheckedCreateInput = {
     id?: number
     taskId: number
     userInput: string
@@ -6245,7 +6245,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type AICommentUpdateInput = {
+  export type AiCommentUpdateInput = {
     userInput?: StringFieldUpdateOperationsInput | string
     aiResponse?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -6253,7 +6253,7 @@ export namespace Prisma {
     task?: TaskUpdateOneRequiredWithoutAiCommentsNestedInput
   }
 
-  export type AICommentUncheckedUpdateInput = {
+  export type AiCommentUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     taskId?: IntFieldUpdateOperationsInput | number
     userInput?: StringFieldUpdateOperationsInput | string
@@ -6262,7 +6262,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type AICommentCreateManyInput = {
+  export type AiCommentCreateManyInput = {
     id?: number
     taskId: number
     userInput: string
@@ -6271,14 +6271,14 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type AICommentUpdateManyMutationInput = {
+  export type AiCommentUpdateManyMutationInput = {
     userInput?: StringFieldUpdateOperationsInput | string
     aiResponse?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type AICommentUncheckedUpdateManyInput = {
+  export type AiCommentUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     taskId?: IntFieldUpdateOperationsInput | number
     userInput?: StringFieldUpdateOperationsInput | string
@@ -6505,10 +6505,10 @@ export namespace Prisma {
     isNot?: UserWhereInput
   }
 
-  export type AICommentListRelationFilter = {
-    every?: AICommentWhereInput
-    some?: AICommentWhereInput
-    none?: AICommentWhereInput
+  export type AiCommentListRelationFilter = {
+    every?: AiCommentWhereInput
+    some?: AiCommentWhereInput
+    none?: AiCommentWhereInput
   }
 
   export type SortOrderInput = {
@@ -6516,7 +6516,7 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type AICommentOrderByRelationAggregateInput = {
+  export type AiCommentOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -6610,7 +6610,7 @@ export namespace Prisma {
     isNot?: TaskWhereInput
   }
 
-  export type AICommentCountOrderByAggregateInput = {
+  export type AiCommentCountOrderByAggregateInput = {
     id?: SortOrder
     taskId?: SortOrder
     userInput?: SortOrder
@@ -6619,21 +6619,12 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type AICommentAvgOrderByAggregateInput = {
+  export type AiCommentAvgOrderByAggregateInput = {
     id?: SortOrder
     taskId?: SortOrder
   }
 
-  export type AICommentMaxOrderByAggregateInput = {
-    id?: SortOrder
-    taskId?: SortOrder
-    userInput?: SortOrder
-    aiResponse?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-  }
-
-  export type AICommentMinOrderByAggregateInput = {
+  export type AiCommentMaxOrderByAggregateInput = {
     id?: SortOrder
     taskId?: SortOrder
     userInput?: SortOrder
@@ -6642,7 +6633,16 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type AICommentSumOrderByAggregateInput = {
+  export type AiCommentMinOrderByAggregateInput = {
+    id?: SortOrder
+    taskId?: SortOrder
+    userInput?: SortOrder
+    aiResponse?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type AiCommentSumOrderByAggregateInput = {
     id?: SortOrder
     taskId?: SortOrder
   }
@@ -6759,18 +6759,18 @@ export namespace Prisma {
     connect?: UserWhereUniqueInput
   }
 
-  export type AICommentCreateNestedManyWithoutTaskInput = {
-    create?: XOR<AICommentCreateWithoutTaskInput, AICommentUncheckedCreateWithoutTaskInput> | AICommentCreateWithoutTaskInput[] | AICommentUncheckedCreateWithoutTaskInput[]
-    connectOrCreate?: AICommentCreateOrConnectWithoutTaskInput | AICommentCreateOrConnectWithoutTaskInput[]
-    createMany?: AICommentCreateManyTaskInputEnvelope
-    connect?: AICommentWhereUniqueInput | AICommentWhereUniqueInput[]
+  export type AiCommentCreateNestedManyWithoutTaskInput = {
+    create?: XOR<AiCommentCreateWithoutTaskInput, AiCommentUncheckedCreateWithoutTaskInput> | AiCommentCreateWithoutTaskInput[] | AiCommentUncheckedCreateWithoutTaskInput[]
+    connectOrCreate?: AiCommentCreateOrConnectWithoutTaskInput | AiCommentCreateOrConnectWithoutTaskInput[]
+    createMany?: AiCommentCreateManyTaskInputEnvelope
+    connect?: AiCommentWhereUniqueInput | AiCommentWhereUniqueInput[]
   }
 
-  export type AICommentUncheckedCreateNestedManyWithoutTaskInput = {
-    create?: XOR<AICommentCreateWithoutTaskInput, AICommentUncheckedCreateWithoutTaskInput> | AICommentCreateWithoutTaskInput[] | AICommentUncheckedCreateWithoutTaskInput[]
-    connectOrCreate?: AICommentCreateOrConnectWithoutTaskInput | AICommentCreateOrConnectWithoutTaskInput[]
-    createMany?: AICommentCreateManyTaskInputEnvelope
-    connect?: AICommentWhereUniqueInput | AICommentWhereUniqueInput[]
+  export type AiCommentUncheckedCreateNestedManyWithoutTaskInput = {
+    create?: XOR<AiCommentCreateWithoutTaskInput, AiCommentUncheckedCreateWithoutTaskInput> | AiCommentCreateWithoutTaskInput[] | AiCommentUncheckedCreateWithoutTaskInput[]
+    connectOrCreate?: AiCommentCreateOrConnectWithoutTaskInput | AiCommentCreateOrConnectWithoutTaskInput[]
+    createMany?: AiCommentCreateManyTaskInputEnvelope
+    connect?: AiCommentWhereUniqueInput | AiCommentWhereUniqueInput[]
   }
 
   export type NullableDateTimeFieldUpdateOperationsInput = {
@@ -6789,32 +6789,32 @@ export namespace Prisma {
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutTasksInput, UserUpdateWithoutTasksInput>, UserUncheckedUpdateWithoutTasksInput>
   }
 
-  export type AICommentUpdateManyWithoutTaskNestedInput = {
-    create?: XOR<AICommentCreateWithoutTaskInput, AICommentUncheckedCreateWithoutTaskInput> | AICommentCreateWithoutTaskInput[] | AICommentUncheckedCreateWithoutTaskInput[]
-    connectOrCreate?: AICommentCreateOrConnectWithoutTaskInput | AICommentCreateOrConnectWithoutTaskInput[]
-    upsert?: AICommentUpsertWithWhereUniqueWithoutTaskInput | AICommentUpsertWithWhereUniqueWithoutTaskInput[]
-    createMany?: AICommentCreateManyTaskInputEnvelope
-    set?: AICommentWhereUniqueInput | AICommentWhereUniqueInput[]
-    disconnect?: AICommentWhereUniqueInput | AICommentWhereUniqueInput[]
-    delete?: AICommentWhereUniqueInput | AICommentWhereUniqueInput[]
-    connect?: AICommentWhereUniqueInput | AICommentWhereUniqueInput[]
-    update?: AICommentUpdateWithWhereUniqueWithoutTaskInput | AICommentUpdateWithWhereUniqueWithoutTaskInput[]
-    updateMany?: AICommentUpdateManyWithWhereWithoutTaskInput | AICommentUpdateManyWithWhereWithoutTaskInput[]
-    deleteMany?: AICommentScalarWhereInput | AICommentScalarWhereInput[]
+  export type AiCommentUpdateManyWithoutTaskNestedInput = {
+    create?: XOR<AiCommentCreateWithoutTaskInput, AiCommentUncheckedCreateWithoutTaskInput> | AiCommentCreateWithoutTaskInput[] | AiCommentUncheckedCreateWithoutTaskInput[]
+    connectOrCreate?: AiCommentCreateOrConnectWithoutTaskInput | AiCommentCreateOrConnectWithoutTaskInput[]
+    upsert?: AiCommentUpsertWithWhereUniqueWithoutTaskInput | AiCommentUpsertWithWhereUniqueWithoutTaskInput[]
+    createMany?: AiCommentCreateManyTaskInputEnvelope
+    set?: AiCommentWhereUniqueInput | AiCommentWhereUniqueInput[]
+    disconnect?: AiCommentWhereUniqueInput | AiCommentWhereUniqueInput[]
+    delete?: AiCommentWhereUniqueInput | AiCommentWhereUniqueInput[]
+    connect?: AiCommentWhereUniqueInput | AiCommentWhereUniqueInput[]
+    update?: AiCommentUpdateWithWhereUniqueWithoutTaskInput | AiCommentUpdateWithWhereUniqueWithoutTaskInput[]
+    updateMany?: AiCommentUpdateManyWithWhereWithoutTaskInput | AiCommentUpdateManyWithWhereWithoutTaskInput[]
+    deleteMany?: AiCommentScalarWhereInput | AiCommentScalarWhereInput[]
   }
 
-  export type AICommentUncheckedUpdateManyWithoutTaskNestedInput = {
-    create?: XOR<AICommentCreateWithoutTaskInput, AICommentUncheckedCreateWithoutTaskInput> | AICommentCreateWithoutTaskInput[] | AICommentUncheckedCreateWithoutTaskInput[]
-    connectOrCreate?: AICommentCreateOrConnectWithoutTaskInput | AICommentCreateOrConnectWithoutTaskInput[]
-    upsert?: AICommentUpsertWithWhereUniqueWithoutTaskInput | AICommentUpsertWithWhereUniqueWithoutTaskInput[]
-    createMany?: AICommentCreateManyTaskInputEnvelope
-    set?: AICommentWhereUniqueInput | AICommentWhereUniqueInput[]
-    disconnect?: AICommentWhereUniqueInput | AICommentWhereUniqueInput[]
-    delete?: AICommentWhereUniqueInput | AICommentWhereUniqueInput[]
-    connect?: AICommentWhereUniqueInput | AICommentWhereUniqueInput[]
-    update?: AICommentUpdateWithWhereUniqueWithoutTaskInput | AICommentUpdateWithWhereUniqueWithoutTaskInput[]
-    updateMany?: AICommentUpdateManyWithWhereWithoutTaskInput | AICommentUpdateManyWithWhereWithoutTaskInput[]
-    deleteMany?: AICommentScalarWhereInput | AICommentScalarWhereInput[]
+  export type AiCommentUncheckedUpdateManyWithoutTaskNestedInput = {
+    create?: XOR<AiCommentCreateWithoutTaskInput, AiCommentUncheckedCreateWithoutTaskInput> | AiCommentCreateWithoutTaskInput[] | AiCommentUncheckedCreateWithoutTaskInput[]
+    connectOrCreate?: AiCommentCreateOrConnectWithoutTaskInput | AiCommentCreateOrConnectWithoutTaskInput[]
+    upsert?: AiCommentUpsertWithWhereUniqueWithoutTaskInput | AiCommentUpsertWithWhereUniqueWithoutTaskInput[]
+    createMany?: AiCommentCreateManyTaskInputEnvelope
+    set?: AiCommentWhereUniqueInput | AiCommentWhereUniqueInput[]
+    disconnect?: AiCommentWhereUniqueInput | AiCommentWhereUniqueInput[]
+    delete?: AiCommentWhereUniqueInput | AiCommentWhereUniqueInput[]
+    connect?: AiCommentWhereUniqueInput | AiCommentWhereUniqueInput[]
+    update?: AiCommentUpdateWithWhereUniqueWithoutTaskInput | AiCommentUpdateWithWhereUniqueWithoutTaskInput[]
+    updateMany?: AiCommentUpdateManyWithWhereWithoutTaskInput | AiCommentUpdateManyWithWhereWithoutTaskInput[]
+    deleteMany?: AiCommentScalarWhereInput | AiCommentScalarWhereInput[]
   }
 
   export type TaskCreateNestedOneWithoutAiCommentsInput = {
@@ -7018,7 +7018,7 @@ export namespace Prisma {
     completionCriteria?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    aiComments?: AICommentCreateNestedManyWithoutTaskInput
+    aiComments?: AiCommentCreateNestedManyWithoutTaskInput
   }
 
   export type TaskUncheckedCreateWithoutUserInput = {
@@ -7031,7 +7031,7 @@ export namespace Prisma {
     completionCriteria?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    aiComments?: AICommentUncheckedCreateNestedManyWithoutTaskInput
+    aiComments?: AiCommentUncheckedCreateNestedManyWithoutTaskInput
   }
 
   export type TaskCreateOrConnectWithoutUserInput = {
@@ -7096,14 +7096,14 @@ export namespace Prisma {
     create: XOR<UserCreateWithoutTasksInput, UserUncheckedCreateWithoutTasksInput>
   }
 
-  export type AICommentCreateWithoutTaskInput = {
+  export type AiCommentCreateWithoutTaskInput = {
     userInput: string
     aiResponse: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
-  export type AICommentUncheckedCreateWithoutTaskInput = {
+  export type AiCommentUncheckedCreateWithoutTaskInput = {
     id?: number
     userInput: string
     aiResponse: string
@@ -7111,13 +7111,13 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type AICommentCreateOrConnectWithoutTaskInput = {
-    where: AICommentWhereUniqueInput
-    create: XOR<AICommentCreateWithoutTaskInput, AICommentUncheckedCreateWithoutTaskInput>
+  export type AiCommentCreateOrConnectWithoutTaskInput = {
+    where: AiCommentWhereUniqueInput
+    create: XOR<AiCommentCreateWithoutTaskInput, AiCommentUncheckedCreateWithoutTaskInput>
   }
 
-  export type AICommentCreateManyTaskInputEnvelope = {
-    data: AICommentCreateManyTaskInput | AICommentCreateManyTaskInput[]
+  export type AiCommentCreateManyTaskInputEnvelope = {
+    data: AiCommentCreateManyTaskInput | AiCommentCreateManyTaskInput[]
     skipDuplicates?: boolean
   }
 
@@ -7147,32 +7147,32 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type AICommentUpsertWithWhereUniqueWithoutTaskInput = {
-    where: AICommentWhereUniqueInput
-    update: XOR<AICommentUpdateWithoutTaskInput, AICommentUncheckedUpdateWithoutTaskInput>
-    create: XOR<AICommentCreateWithoutTaskInput, AICommentUncheckedCreateWithoutTaskInput>
+  export type AiCommentUpsertWithWhereUniqueWithoutTaskInput = {
+    where: AiCommentWhereUniqueInput
+    update: XOR<AiCommentUpdateWithoutTaskInput, AiCommentUncheckedUpdateWithoutTaskInput>
+    create: XOR<AiCommentCreateWithoutTaskInput, AiCommentUncheckedCreateWithoutTaskInput>
   }
 
-  export type AICommentUpdateWithWhereUniqueWithoutTaskInput = {
-    where: AICommentWhereUniqueInput
-    data: XOR<AICommentUpdateWithoutTaskInput, AICommentUncheckedUpdateWithoutTaskInput>
+  export type AiCommentUpdateWithWhereUniqueWithoutTaskInput = {
+    where: AiCommentWhereUniqueInput
+    data: XOR<AiCommentUpdateWithoutTaskInput, AiCommentUncheckedUpdateWithoutTaskInput>
   }
 
-  export type AICommentUpdateManyWithWhereWithoutTaskInput = {
-    where: AICommentScalarWhereInput
-    data: XOR<AICommentUpdateManyMutationInput, AICommentUncheckedUpdateManyWithoutTaskInput>
+  export type AiCommentUpdateManyWithWhereWithoutTaskInput = {
+    where: AiCommentScalarWhereInput
+    data: XOR<AiCommentUpdateManyMutationInput, AiCommentUncheckedUpdateManyWithoutTaskInput>
   }
 
-  export type AICommentScalarWhereInput = {
-    AND?: AICommentScalarWhereInput | AICommentScalarWhereInput[]
-    OR?: AICommentScalarWhereInput[]
-    NOT?: AICommentScalarWhereInput | AICommentScalarWhereInput[]
-    id?: IntFilter<"AIComment"> | number
-    taskId?: IntFilter<"AIComment"> | number
-    userInput?: StringFilter<"AIComment"> | string
-    aiResponse?: StringFilter<"AIComment"> | string
-    createdAt?: DateTimeFilter<"AIComment"> | Date | string
-    updatedAt?: DateTimeFilter<"AIComment"> | Date | string
+  export type AiCommentScalarWhereInput = {
+    AND?: AiCommentScalarWhereInput | AiCommentScalarWhereInput[]
+    OR?: AiCommentScalarWhereInput[]
+    NOT?: AiCommentScalarWhereInput | AiCommentScalarWhereInput[]
+    id?: IntFilter<"AiComment"> | number
+    taskId?: IntFilter<"AiComment"> | number
+    userInput?: StringFilter<"AiComment"> | string
+    aiResponse?: StringFilter<"AiComment"> | string
+    createdAt?: DateTimeFilter<"AiComment"> | Date | string
+    updatedAt?: DateTimeFilter<"AiComment"> | Date | string
   }
 
   export type TaskCreateWithoutAiCommentsInput = {
@@ -7262,7 +7262,7 @@ export namespace Prisma {
     completionCriteria?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    aiComments?: AICommentUpdateManyWithoutTaskNestedInput
+    aiComments?: AiCommentUpdateManyWithoutTaskNestedInput
   }
 
   export type TaskUncheckedUpdateWithoutUserInput = {
@@ -7275,7 +7275,7 @@ export namespace Prisma {
     completionCriteria?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    aiComments?: AICommentUncheckedUpdateManyWithoutTaskNestedInput
+    aiComments?: AiCommentUncheckedUpdateManyWithoutTaskNestedInput
   }
 
   export type TaskUncheckedUpdateManyWithoutUserInput = {
@@ -7290,7 +7290,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type AICommentCreateManyTaskInput = {
+  export type AiCommentCreateManyTaskInput = {
     id?: number
     userInput: string
     aiResponse: string
@@ -7298,14 +7298,14 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type AICommentUpdateWithoutTaskInput = {
+  export type AiCommentUpdateWithoutTaskInput = {
     userInput?: StringFieldUpdateOperationsInput | string
     aiResponse?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type AICommentUncheckedUpdateWithoutTaskInput = {
+  export type AiCommentUncheckedUpdateWithoutTaskInput = {
     id?: IntFieldUpdateOperationsInput | number
     userInput?: StringFieldUpdateOperationsInput | string
     aiResponse?: StringFieldUpdateOperationsInput | string
@@ -7313,7 +7313,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type AICommentUncheckedUpdateManyWithoutTaskInput = {
+  export type AiCommentUncheckedUpdateManyWithoutTaskInput = {
     id?: IntFieldUpdateOperationsInput | number
     userInput?: StringFieldUpdateOperationsInput | string
     aiResponse?: StringFieldUpdateOperationsInput | string

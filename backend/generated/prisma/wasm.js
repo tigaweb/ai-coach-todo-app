@@ -141,7 +141,7 @@ exports.Prisma.TaskScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.AICommentScalarFieldEnum = {
+exports.Prisma.AiCommentScalarFieldEnum = {
   id: 'id',
   taskId: 'taskId',
   userInput: 'userInput',
@@ -178,7 +178,7 @@ exports.Prisma.NullsOrder = {
 exports.Prisma.ModelName = {
   User: 'User',
   Task: 'Task',
-  AIComment: 'AIComment',
+  AiComment: 'AiComment',
   Prompt: 'Prompt'
 };
 

@@ -39,21 +39,23 @@ model Task {
   updatedAt          DateTime   @updatedAt @map("updated_at")
   
   user               User       @relation(fields: [userId], references: [id], onDelete: Cascade)
-  aiComments         AIComment[]
+  aiComments         AiComment[]
   
   @@map("tasks")
 }
 
-model AIComment {
-  id         Int        @id @default(autoincrement())
-  taskId     Int        @map("task_id")
-  userInput  String     @db.VarChar(500)
-  aiResponse String     @db.VarChar(500)
-  createdAt  DateTime   @default(now()) @map("created_at")
-  updatedAt  DateTime   @updatedAt @map("updated_at")
-  
-  task       Task       @relation(fields: [taskId], references: [id], onDelete: Cascade)
-  
+model AiComment {
+  id         Int      @id @default(autoincrement())
+  taskId     Int      @map("task_id")
+  userInput  String   @map("user_input") @db.VarChar(500)
+  aiResponse String   @map("ai_response") @db.VarChar(500)
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  task       Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+
+  @@index([taskId])
+  @@index([createdAt])
   @@map("ai_comments")
 }
 
