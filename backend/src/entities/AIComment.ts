@@ -14,10 +14,14 @@ export interface CreateAICommentRequest {
 export interface AIConsultationRequest {
   taskId: number;
   userInput: string;
-  taskTitle: string;
-  progress: number;
-  dueDate: Date | null;
-  notes: string | null;
-  completionCriteria: string | null;
+  taskContext: TaskContext;
   systemPrompt: string;
 }
+
+export interface TaskContext {
+  title: string;
+  progress: number;
+  dueDate?: Date | null;
+  completionCriteria?: string | null;
+  notes?: string | null;
+} 
