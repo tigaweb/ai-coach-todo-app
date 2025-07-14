@@ -2,7 +2,7 @@ export interface Task {
   id: number;
   userId: number;
   title: string;
-  progres: number;
+  progress: number;
   status: TaskStatus;
   dueDate: Date | null,
   notes: string | null;
