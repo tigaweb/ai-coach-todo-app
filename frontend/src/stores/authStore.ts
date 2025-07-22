@@ -1,5 +1,7 @@
 import { create } from "zustand";
 import { User } from "../types";
+import { apiService } from "../services/api";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
 interface AuthState {
@@ -17,14 +19,29 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   isAuthenticated: false,
 
   login: async (email: string, password: string) => {
-    set({isLoading: true});
+    set({ isLoading: true });
+    try {
+      const response = await apiService.login(email, password);
+      set({
+        user: response.user,
+        isAuthenticated: true,
+        isLoading: false
+      });
+    } catch (error) {
+      set({ isLoading: false });
+      throw error;
+    }
   },
 
   logout: async () => {
-    
+    await AsyncStorage.removeItem('authToken');
+    set({ user: null, isAuthenticated: false });
   },
 
   initialize: async () => {
-    
+    const token = await AsyncStorage.getItem('authToken');
+    if (token) {
+      set({ isAuthenticated: true });
+    }
   },
 }));
