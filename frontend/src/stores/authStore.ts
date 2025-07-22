@@ -22,6 +22,7 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     set({ isLoading: true });
     try {
       const response = await apiService.login(email, password);
+      await AsyncStorage.setItem('authToken', response.token);
       set({
         user: response.user,
         isAuthenticated: true,
