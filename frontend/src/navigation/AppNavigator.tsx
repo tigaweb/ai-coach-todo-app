@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { useAuthStore } from "../stores/authStore";
 import { NavigationContainer } from "@react-navigation/native";
 import LoginScreen from "../screens/LoginScreen";
+import TaskListScreen from "../screens/TaskListScreen";
 
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -19,7 +20,7 @@ const AppNavigator: React.FC = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {isAuthenticated ? (
-          <>test</>
+          <Stack.Screen name="TaskList" component={TaskListScreen} />
         ) : (
           <Stack.Screen name="Login" component={LoginScreen} />
         )}
