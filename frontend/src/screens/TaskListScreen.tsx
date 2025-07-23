@@ -13,8 +13,14 @@ import {
 import { useTaskStore } from '../stores/taskStore';
 import { useAuthStore } from '../stores/authStore';
 import { Task, TaskStatus } from '../types';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../types/navigation';
+
+type TaskListScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'TaskList'>;
 
 const TaskListScreen: React.FC = () => {
+  const navigation = useNavigation<TaskListScreenNavigationProp>();
   const { tasks, isLoading, fetchTasks } = useTaskStore();
   const { logout } = useAuthStore();
 
@@ -95,7 +101,7 @@ const TaskListScreen: React.FC = () => {
       <FAB
         icon="plus"
         style={styles.fab}
-        onPress={() => {/* 新規作成画面に遷移 */ }}
+        onPress={() => { navigation.navigate('CreateTask') }}
       />
     </View>
   );

@@ -5,6 +5,7 @@ import { useAuthStore } from "../stores/authStore";
 import { NavigationContainer } from "@react-navigation/native";
 import LoginScreen from "../screens/LoginScreen";
 import TaskListScreen from "../screens/TaskListScreen";
+import CreateTaskScreen from "../screens/CreateTaskScreen";
 
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -20,7 +21,10 @@ const AppNavigator: React.FC = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {isAuthenticated ? (
-          <Stack.Screen name="TaskList" component={TaskListScreen} />
+          <>
+            <Stack.Screen name="TaskList" component={TaskListScreen} />
+            <Stack.Screen name="CreateTask" component={CreateTaskScreen} />
+          </>
         ) : (
           <Stack.Screen name="Login" component={LoginScreen} />
         )}

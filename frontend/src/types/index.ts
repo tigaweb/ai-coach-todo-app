@@ -22,6 +22,13 @@ export enum TaskStatus {
   DELETED = 2
 }
 
+export interface CreateTaskRequest {
+  title: string;
+  dueDate?: string;
+  notes?: string;
+  completionCriteria?: string;
+}
+
 export interface AIComment {
   id: number;
   taskId: number;
