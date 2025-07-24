@@ -29,6 +29,15 @@ export interface CreateTaskRequest {
   completionCriteria?: string;
 }
 
+export interface UpdateTaskRequest {
+  title?: string;
+  progress?: number;
+  status?: TaskStatus;
+  dueDate?: string;
+  notes?: string;
+  completionCriteria?: string;
+}
+
 export interface AIComment {
   id: number;
   taskId: number;
