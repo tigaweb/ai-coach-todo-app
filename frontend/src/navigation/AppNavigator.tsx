@@ -8,6 +8,7 @@ import TaskListScreen from "../screens/TaskListScreen";
 import CreateTaskScreen from "../screens/CreateTaskScreen";
 import TaskDetailScreen from "../screens/TaskDetailScreen";
 import EditTaskScreen from "../screens/EditTaskScreen";
+import AIConsultScreen from "../screens/AIConsultScreen";
 
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -28,6 +29,7 @@ const AppNavigator: React.FC = () => {
             <Stack.Screen name="CreateTask" component={CreateTaskScreen} />
             <Stack.Screen name="TaskDetail" component={TaskDetailScreen} />
             <Stack.Screen name="EditTask" component={EditTaskScreen} />
+            <Stack.Screen name="AIConsult" component={AIConsultScreen} />
           </>
         ) : (
           <Stack.Screen name="Login" component={LoginScreen} />

@@ -73,7 +73,7 @@ const TaskListScreen: React.FC = () => {
           <Button mode="outlined" onPress={() => { navigation.navigate('TaskDetail', { taskId: item.id }) }}>
             詳細
           </Button>
-          <Button mode="contained" onPress={() => {/* AI相談画面に遷移 */ }}>
+          <Button mode="contained" onPress={() => { navigation.navigate('AIConsult', { taskId: item.id }) }}>
             AI相談
           </Button>
         </View>
