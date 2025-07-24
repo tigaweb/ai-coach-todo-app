@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from "axios";
 import { InternalAxiosRequestConfig } from "axios";
-import { AIComment, AuthResponse, Task, TasksResponse } from "../types";
+import { AIComment, AuthResponse, Task, TaskResponse, TasksResponse } from "../types";
 
 const API_BASE_URL = __DEV__
   ? 'http://192.168.1.167:3000'  // 開発時は実際のIPアドレスに変更
@@ -56,6 +56,11 @@ class ApiService {
   async getTasks(): Promise<TasksResponse> {
     const response = await this.client.get<{ tasks: Task[] }>('/api/tasks');
     return response.data;
+  }
+
+  async getTask(id: number): Promise<Task> {
+    const response = await this.client.get<TaskResponse>(`/api/tasks/${id}`);
+    return response.data.task;
   }
 
   // タスク作成API

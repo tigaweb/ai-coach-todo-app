@@ -6,6 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import LoginScreen from "../screens/LoginScreen";
 import TaskListScreen from "../screens/TaskListScreen";
 import CreateTaskScreen from "../screens/CreateTaskScreen";
+import TaskDetailScreen from "../screens/TaskDetailScreen";
 
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -24,6 +25,7 @@ const AppNavigator: React.FC = () => {
           <>
             <Stack.Screen name="TaskList" component={TaskListScreen} />
             <Stack.Screen name="CreateTask" component={CreateTaskScreen} />
+            <Stack.Screen name="TaskDetail" component={TaskDetailScreen} />
           </>
         ) : (
           <Stack.Screen name="Login" component={LoginScreen} />

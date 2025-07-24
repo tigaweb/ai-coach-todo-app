@@ -7,7 +7,9 @@ interface TaskState {
   tasks: Task[];
   currentTask: Task | null;
   isLoading: boolean;
+  error: string | null;
   fetchTasks: () => Promise<void>;
+  fetchTask: (id: number) => Promise<void>;
   createTask: (task: Partial<Task>) => Promise<void>;
   updateTask: (id: number, updates: Partial<Task>) => Promise<void>;
   deleteTask: (id: number) => Promise<void>;
@@ -18,6 +20,7 @@ export const useTaskStore = create<TaskState>((set, get) => ({
   tasks: [],
   currentTask: null,
   isLoading: false,
+  error: null,
 
   fetchTasks: async () => {
     set({ isLoading: true });
@@ -27,6 +30,19 @@ export const useTaskStore = create<TaskState>((set, get) => ({
     } catch (error) {
       set({ isLoading: false });
       throw error;
+    }
+  },
+
+  fetchTask: async (id: number) => {
+    set({ isLoading: true, error: null });
+    try {
+      const task = await apiService.getTask(id);
+      set({ currentTask: task, isLoading: false });
+    } catch (error: any) {
+      set({ 
+        error: error.response?.data?.error || 'タスクの取得に失敗しました',
+        isLoading: false 
+      });
     }
   },
 

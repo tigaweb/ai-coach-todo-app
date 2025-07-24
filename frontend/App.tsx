@@ -1,11 +1,13 @@
 import React from 'react';
-import { Provider as PaperProvider } from 'react-native-paper';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import AppNavigator from './src/navigation/AppNavigator';
 
 const theme = {
+  ...DefaultTheme,
   colors: {
-    primary: '#2196F3',
-    accent: '#FF9800',
+    ...DefaultTheme.colors,
+    primary: '#2196f3',
+    accent: '#03dac4',
   },
 };
 

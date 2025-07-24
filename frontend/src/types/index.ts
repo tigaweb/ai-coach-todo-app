@@ -47,6 +47,10 @@ export interface TasksResponse {
   tasks: Task[];
 }
 
+export interface TaskResponse {
+  task: Task;
+}
+
 export interface AICommentResponse {
   aiComment: AIComment;
 }
