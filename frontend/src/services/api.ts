@@ -82,7 +82,11 @@ class ApiService {
 
   // AI相談API
   async consultTask(taskId: number, userInput: string): Promise<AIComment> {
-    const response = await this.client.post<{ aiComment: AIComment }>(`/api/tasks/${taskId}/comments`);
+    const response = await this.client.post<{ aiComment: AIComment }>(
+      `/api/tasks/${taskId}/consult`,
+      { userInput },
+      { timeout: 90000 } // AI相談は90秒のタイムアウト
+    );
     return response.data.aiComment;
   }
 
